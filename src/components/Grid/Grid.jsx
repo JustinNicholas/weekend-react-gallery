@@ -1,10 +1,10 @@
 import Picture from '../Picture/Picture.jsx'
 
-function Grid() {
+function Grid({pictures}) {
     return(
         <div>
             {/* will have to .map to go through all of the data in the array. */}
-            <Picture />
+            <Picture pictures={pictures} />
         </div>
     )
 }
