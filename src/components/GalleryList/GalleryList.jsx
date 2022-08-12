@@ -1,4 +1,4 @@
-import Picture from '../Picture/Picture.jsx'
+import Picture from '../GalleryItem/GalleryItem.jsx'
 
 function Grid({pictures}) {
     return(

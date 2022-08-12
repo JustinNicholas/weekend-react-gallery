@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios'
 import './App.css';
 import Header from '../Header/Header.jsx'
-import Grid from '../Grid/Grid.jsx'
+import Grid from '../GalleryList/GalleryList.jsx'
 
 function App() {
 
