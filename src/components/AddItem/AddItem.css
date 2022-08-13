@@ -10,6 +10,7 @@
     box-shadow: 0px 10px 10px #095d6839;
     margin-bottom: 30px;
     position: relative;
+    margin-top: -50px;
 }
 
 .urlIn {
@@ -26,6 +27,13 @@
     background-color: #fff;
 }
 
+.urlIn:focus {
+    outline: none;
+}
+
+.desIn:focus {
+    outline: none;
+}
 .addButton {
     border: none;
     display: inline-block;
