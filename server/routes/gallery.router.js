@@ -32,7 +32,7 @@ router.put('/like/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     console.log(req.params);
     const galleryId = req.params.id;
-    const updateStatus = req.body.showingImage;
+    const updateStatus = req.body.showingimage;
 
     // for(const galleryItem of galleryItems) {
     //     if(galleryItem.id == galleryId) {
@@ -48,8 +48,6 @@ router.put('/:id', (req, res) => {
             console.log(err);
             res.sendStatus(500);
         })
-
-    res.sendStatus(200);
 }); // END PUT Route
 
 // GET Route

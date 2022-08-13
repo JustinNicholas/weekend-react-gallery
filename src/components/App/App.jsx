@@ -40,14 +40,14 @@ function App() {
     })
   }
 
-  const toggleImage = (id, showingImage) => {
-    const updateStatus = !showingImage;
+  const toggleImage = (id, showingimage) => {
+    const updateStatus = !showingimage;
     
     axios({
       method: 'PUT',
       url: `/gallery/${id}`,
       data: {
-        showingImage: updateStatus
+        showingimage: updateStatus
       }
     }).then( response => {
       console.log(response);

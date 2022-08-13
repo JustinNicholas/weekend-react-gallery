@@ -1,12 +1,12 @@
 import './GalleryItem.css'
 
-function GalleryItem({key, id, description, path, likes, showingImage, updateLikes, toggleImage}) {
-    if (showingImage){
+function GalleryItem({key, id, description, path, likes, showingimage, updateLikes, toggleImage}) {
+    if (showingimage === true){
         console.log(path);
         return(
             <>
                     <div id={id} key={key}>
-                        <div className="pictureBox" onClick={ () => toggleImage(id, showingImage)}>
+                        <div className="pictureBox" onClick={ () => toggleImage(id, showingimage)}>
                             <img src= {path}/>
                         </div>
                         <br />
@@ -18,11 +18,11 @@ function GalleryItem({key, id, description, path, likes, showingImage, updateLik
             </>
     
         )
-    } else {
+        } else {
         return(
             <>
                     <div id={id} key={key}>
-                        <div className="pictureBox" onClick={ () => toggleImage(id, showingImage)}>
+                        <div className="pictureBox" onClick={ () => toggleImage(id, showingimage)}>
                             <p>{description}</p>
                         </div>
                         <br />
@@ -34,7 +34,7 @@ function GalleryItem({key, id, description, path, likes, showingImage, updateLik
             </>
     
         )
-    }
+        }
 }
 
 export default GalleryItem;
