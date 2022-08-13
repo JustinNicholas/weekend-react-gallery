@@ -28,7 +28,24 @@ function App() {
   const updateLikes = (id) => {
     axios({
       method: 'PUT',
-      url: `/gallery/like/${id}`,
+      url: `/gallery/like/${id}`
+    }).then( response => {
+      console.log(response);
+      getPictures();
+    }).catch( err => {
+      console.log(err);
+    })
+  }
+
+  const toggleImage = (id, showingImage) => {
+    const updateStatus = !showingImage;
+    
+    axios({
+      method: 'PUT',
+      url: `/gallery/${id}`,
+      data: {
+        showingImage: updateStatus
+      }
     }).then( response => {
       console.log(response);
       getPictures();
@@ -41,7 +58,7 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <GalleryList pictures={pictures} updateLikes={updateLikes} />
+        <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} />
       </div>
     );
 }
