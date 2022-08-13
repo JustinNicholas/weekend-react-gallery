@@ -22,6 +22,9 @@ img {
 }
 
 .description {
+    padding-top: 120px;
+    background-color: #222;
+    color: #fff;
     max-width: 100%;
     height: 400px;
     object-fit: cover;

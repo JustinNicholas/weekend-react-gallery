@@ -7,9 +7,9 @@ import GalleryList from '../GalleryList/GalleryList.jsx'
 import AddItem from '../AddItem/AddItem';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faThumbsUp, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faThumbsUp, faXmark, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faThumbsUp, faXmark)
+library.add(faThumbsUp, faXmark, faCirclePlus)
 
 function App() {
 
@@ -95,7 +95,7 @@ function App() {
       <div className="App">
         <Header />
         <AddItem addPicture={addPicture} getPictures={getPictures} />
-        <div className="container-fluid gx-5 overflow-hidden" >
+        <div className="container gx-5 overflow-hidden" >
           <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 cardBox'>
             <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} deletePicture={deletePicture}/>
           </div>

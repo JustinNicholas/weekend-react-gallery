@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './AddItem.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function AddItem({addPicture}) {
 
@@ -9,8 +10,8 @@ function AddItem({addPicture}) {
     return (
         <div className='inputBox' >
             <input className='urlIn' type="text" placeholder="Image URL" onChange={(event) => setUrl(event.target.value)}/>
-            <input className='desIn' type="text" placeholder="Image Description" onChange={(event) => setDes(event.target.value)} />
-            <button onClick={() => addPicture(url, des)}>Add Image</button>
+            <input className='desIn' type="text" placeholder="Description" onChange={(event) => setDes(event.target.value)} />
+            <div className='addButton' onClick={() => addPicture(url, des)}><FontAwesomeIcon icon="fa-solid fa-circle-plus" /></div>
         </div>
 
     )
