@@ -6,6 +6,11 @@ import Header from '../Header/Header.jsx'
 import GalleryList from '../GalleryList/GalleryList.jsx'
 import AddItem from '../AddItem/AddItem';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faThumbsUp, faXmark } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faThumbsUp, faXmark)
+
 function App() {
 
   useEffect(() => {
@@ -90,7 +95,12 @@ function App() {
       <div className="App">
         <Header />
         <AddItem addPicture={addPicture} getPictures={getPictures} />
-        <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} deletePicture={deletePicture}/>
+        <div className="container" >
+          <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
+            <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} deletePicture={deletePicture}/>
+          </div>
+        </div>
+        
       </div>
     );
 }
