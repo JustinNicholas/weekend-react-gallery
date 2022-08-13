@@ -1,0 +1,10 @@
+.col {
+    position: relative;
+    /* border: 1px solid black; */
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0px 20px 10px #095d6839;
+    margin-bottom: 30px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
