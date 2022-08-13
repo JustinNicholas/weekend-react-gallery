@@ -24,9 +24,9 @@ function GalleryItem({key, id, description, path, likes, showingimage, updateLik
         } else {
         return(
             <>
-                    <div className='col' id={id} key={key}>
+                    <div className='col g-2' id={id} key={key}>
                         <div className="pictureBox" onClick={ () => toggleImage(id, showingimage)}>
-                            <p>{description}</p>
+                            <p className='description'>{description}</p>
                         </div>
                         <br />
                         {/* <p>This will return the pictures. we will need to toggle picture and description on click</p> */}
