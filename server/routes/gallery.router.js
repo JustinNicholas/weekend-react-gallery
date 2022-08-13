@@ -65,4 +65,19 @@ router.get('/', (req, res) => {
         })
 }); // END GET Route
 
+router.post('/', (req, res) => {
+    let queryText = 'INSERT INTO pictures ("path", "description", "likes", "showingimage") VALUES ($1, $2, $3, $4)';
+    let queryValues = [req.body.path, req.body.description, 0, true]
+
+   
+    pool.query(queryText, queryValues)
+    .then( result => {
+        res.sendStatus(200);
+    }).catch( err => {
+        console.log(queryValues);
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
+
 module.exports = router;

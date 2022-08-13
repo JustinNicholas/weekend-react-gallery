@@ -4,6 +4,7 @@ import axios from 'axios'
 import './App.css';
 import Header from '../Header/Header.jsx'
 import GalleryList from '../GalleryList/GalleryList.jsx'
+import AddItem from '../AddItem/AddItem';
 
 function App() {
 
@@ -20,6 +21,22 @@ function App() {
     }).then( response => {
       console.log(response.data);
       setPictures(response.data);
+    }).catch( err => {
+      console.log(err);
+    })
+  }
+
+  const addPicture = (url, des) => {
+    console.log(url, des);
+    axios({
+      method: 'POST',
+      url: '/gallery',
+      data: {
+        path: url,
+        description: des
+      }
+    }).then( response => {
+      getPictures();
     }).catch( err => {
       console.log(err);
     })
@@ -61,6 +78,7 @@ function App() {
     return (
       <div className="App">
         <Header />
+        <AddItem addPicture={addPicture} getPictures={getPictures} />
         <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} />
       </div>
     );
