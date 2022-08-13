@@ -25,10 +25,13 @@ function App() {
     })
   }
 
-  const updateLikes = (id) => {
+  const updateLikes = (id, likes) => {
     axios({
       method: 'PUT',
-      url: `/gallery/like/${id}`
+      url: `/gallery/like/${id}`,
+      data: {
+        likes: likes + 1
+      }
     }).then( response => {
       console.log(response);
       getPictures();
@@ -37,14 +40,14 @@ function App() {
     })
   }
 
-  const toggleImage = (id, showingImage) => {
-    const updateStatus = !showingImage;
+  const toggleImage = (id, showingimage) => {
+    const updateStatus = !showingimage;
     
     axios({
       method: 'PUT',
       url: `/gallery/${id}`,
       data: {
-        showingImage: updateStatus
+        showingimage: updateStatus
       }
     }).then( response => {
       console.log(response);
