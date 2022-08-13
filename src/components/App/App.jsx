@@ -96,7 +96,7 @@ function App() {
         <Header />
         <AddItem addPicture={addPicture} getPictures={getPictures} />
         <div className="container-fluid gx-5 overflow-hidden" >
-          <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 cardBox'>
+          <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 cardBox'>
             <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} deletePicture={deletePicture}/>
           </div>
         </div>

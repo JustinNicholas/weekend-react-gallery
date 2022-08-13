@@ -1,0 +1,18 @@
+.inputBox {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    width: 80%;
+    height: 80px;
+    background-color: #bfbfbf;
+    border-radius: 40px;
+}
+
+.urlIn {
+width:30%;
+
+}
+
+.desIn {
+    width:30%;
+}

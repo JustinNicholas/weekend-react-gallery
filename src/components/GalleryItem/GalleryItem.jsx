@@ -11,12 +11,11 @@ function GalleryItem({key, id, description, path, likes, showingimage, updateLik
                         <div className="pictureBox" onClick={ () => toggleImage(id, showingimage)}>
                             <img src= {path}/>
                         </div>
-                        <br />
                         {/* <p>This will return the pictures. we will need to toggle picture and description on click</p> */}
                         <div className='infoBox'>
-                            <button onClick={ () => updateLikes(id, likes) }>Like <FontAwesomeIcon icon="fa-solid fa-thumbs-up" /></button>
-                            <button onClick={ () => deletePicture(id) }>Delete <FontAwesomeIcon icon="fa-solid fa-xmark" /></button>
-                            <p>{likes} of people who like this.</p> 
+                            <p className='numberLikes'>{likes} people like this.</p> 
+                            <button className='likeButton' onClick={ () => updateLikes(id, likes) }><FontAwesomeIcon icon="fa-solid fa-thumbs-up" /></button>
+                            <button className='deleteButton' onClick={ () => deletePicture(id) }><FontAwesomeIcon icon="fa-solid fa-xmark" /></button>
                         </div>
                     </div>
     
@@ -28,12 +27,12 @@ function GalleryItem({key, id, description, path, likes, showingimage, updateLik
                         <div className="pictureBox" onClick={ () => toggleImage(id, showingimage)}>
                             <p className='description'>{description}</p>
                         </div>
-                        <br />
                         {/* <p>This will return the pictures. we will need to toggle picture and description on click</p> */}
-                        <button onClick={ () => updateLikes(id, likes) }>Like</button>
-                        <button onClick={ () => deletePicture(id) }>Delete</button>
-                        {/* Will need to be conditional. */}
-                        <p>{likes} of people who like this.</p> 
+                        <div className='infoBox'>
+                            <p className='numberLikes'>{likes} people like this.</p> 
+                            <button className='likeButton' onClick={ () => updateLikes(id, likes) }><FontAwesomeIcon icon="fa-solid fa-thumbs-up" /></button>
+                            <button className='deleteButton' onClick={ () => deletePicture(id) }><FontAwesomeIcon icon="fa-solid fa-xmark" /></button>
+                        </div>
                     </div>
             </>
     

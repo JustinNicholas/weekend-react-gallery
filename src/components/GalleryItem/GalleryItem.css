@@ -27,4 +27,22 @@ img {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    margin-bottom: 0;
+}
+
+.likeButton, .deleteButton {
+    display: inline-block;
+    margin: 3%;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: black;
+    color: aliceblue;
+    pointer-events: all;
+}
+
+.numberLikes {
+    display: inline-block;
+    margin-right: 20%;
 }
