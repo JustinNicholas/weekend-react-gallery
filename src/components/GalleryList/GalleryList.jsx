@@ -1,12 +1,13 @@
-import Picture from '../GalleryItem/GalleryItem.jsx'
+import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
-function Grid({pictures}) {
+function GalleryList({pictures, updateLikes}) {
+
     return(
         <>
         {pictures.map(picture => (
             <div key={picture.id}>
                 {/* will have to .map to go through all of the data in the array. */}
-                <Picture pictures={pictures} id={picture.id} description={picture.description} path={picture.path} likes={picture.likes}/>
+                <GalleryItem pictures={pictures} id={picture.id} description={picture.description} path={picture.path} likes={picture.likes} updateLikes={updateLikes} />
             </div>
         ))}
         </>
@@ -14,4 +15,4 @@ function Grid({pictures}) {
     )
 }
 
-export default Grid;
+export default GalleryList;
