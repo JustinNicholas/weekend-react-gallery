@@ -1,5 +1,5 @@
 
-function Picture({key, id, description, path, likes}) {
+function GalleryItem({key, id, description, path, likes, updateLikes}) {
 
     return(
         <>
@@ -8,7 +8,7 @@ function Picture({key, id, description, path, likes}) {
                     <img src= {path}/>
                     <br />
                     {/* <p>This will return the pictures. we will need to toggle picture and description on click</p> */}
-                    <button>Like</button>
+                    <button onClick={ () => updateLikes(id) }>Like</button>
                     {/* Will need to be conditional. */}
                     <p>{likes} of people who like this.</p> 
                 </div>
@@ -17,4 +17,4 @@ function Picture({key, id, description, path, likes}) {
     )
 }
 
-export default Picture;
+export default GalleryItem;

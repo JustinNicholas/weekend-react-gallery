@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios'
 import './App.css';
 import Header from '../Header/Header.jsx'
-import Grid from '../GalleryList/GalleryList.jsx'
+import GalleryList from '../GalleryList/GalleryList.jsx'
 
 function App() {
 
@@ -24,11 +24,24 @@ function App() {
       console.log(err);
     })
   }
+
+  const updateLikes = (id) => {
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`,
+    }).then( response => {
+      console.log(response);
+      getPictures();
+    }).catch( err => {
+      console.log(err);
+    })
+  }
+
   console.log(pictures);
     return (
       <div className="App">
         <Header />
-        <Grid pictures={pictures} />
+        <GalleryList pictures={pictures} updateLikes={updateLikes} />
       </div>
     );
 }
