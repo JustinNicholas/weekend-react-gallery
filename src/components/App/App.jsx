@@ -57,6 +57,17 @@ function App() {
     })
   }
 
+  const deletePicture = (id) => {
+    axios({
+      method: 'DELETE',
+      url: `/gallery/${id}`
+    }).then( response => {
+      getPictures();
+    }).catch( err => {
+      console.log(err);
+    })
+  }
+
   const toggleImage = (id, showingimage) => {
     const updateStatus = !showingimage;
     
@@ -79,7 +90,7 @@ function App() {
       <div className="App">
         <Header />
         <AddItem addPicture={addPicture} getPictures={getPictures} />
-        <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} />
+        <GalleryList pictures={pictures} updateLikes={updateLikes} toggleImage={toggleImage} deletePicture={deletePicture}/>
       </div>
     );
 }

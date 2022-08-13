@@ -80,4 +80,18 @@ router.post('/', (req, res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    let queryText = 'DELETE FROM pictures WHERE id=$1'
+    let queryValues = [req.params.id]
+
+    pool.query(queryText, queryValues)
+        .then( result => {
+            console.log(queryText, queryValues);
+            res.sendStatus(204);
+        }).catch( err => {
+            console.log(err);
+            res.sendStatus(500);
+        })
+})
+
 module.exports = router;

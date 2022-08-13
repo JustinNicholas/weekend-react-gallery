@@ -1,6 +1,6 @@
 import './GalleryItem.css'
 
-function GalleryItem({key, id, description, path, likes, showingimage, updateLikes, toggleImage}) {
+function GalleryItem({key, id, description, path, likes, showingimage, updateLikes, toggleImage, deletePicture}) {
     if (showingimage === true){
         console.log(path);
         return(
@@ -12,6 +12,7 @@ function GalleryItem({key, id, description, path, likes, showingimage, updateLik
                         <br />
                         {/* <p>This will return the pictures. we will need to toggle picture and description on click</p> */}
                         <button onClick={ () => updateLikes(id, likes) }>Like</button>
+                        <button onClick={ () => deletePicture(id) }>Delete</button>
                         {/* Will need to be conditional. */}
                         <p>{likes} of people who like this.</p> 
                     </div>
@@ -28,6 +29,7 @@ function GalleryItem({key, id, description, path, likes, showingimage, updateLik
                         <br />
                         {/* <p>This will return the pictures. we will need to toggle picture and description on click</p> */}
                         <button onClick={ () => updateLikes(id, likes) }>Like</button>
+                        <button onClick={ () => deletePicture(id) }>Delete</button>
                         {/* Will need to be conditional. */}
                         <p>{likes} of people who like this.</p> 
                     </div>
