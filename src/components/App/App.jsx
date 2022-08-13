@@ -25,10 +25,13 @@ function App() {
     })
   }
 
-  const updateLikes = (id) => {
+  const updateLikes = (id, likes) => {
     axios({
       method: 'PUT',
-      url: `/gallery/like/${id}`
+      url: `/gallery/like/${id}`,
+      data: {
+        likes: likes + 1
+      }
     }).then( response => {
       console.log(response);
       getPictures();
