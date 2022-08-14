@@ -1,3 +1,4 @@
+/* styling for the input section */
 .inputBox {
     margin-left: auto;
     margin-right: auto;
@@ -6,7 +7,7 @@
     background-color: #fff;
     border-radius: 40px;
     padding: 0;
-    box-shadow: 8px 10px 10px #095d6839;
+    box-shadow: 8px 10px 10px #095d681a;
     margin-bottom: 30px;
     position: relative;
     margin-top: -50px;
@@ -19,12 +20,18 @@
     width:30%;
     border: none;
     background-color: #fff;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 16px;
 }
 
 .desIn {
     width:50%;
     border: none;
     background-color: #fff;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 16px;
 }
 
 .urlIn:focus {
@@ -44,4 +51,9 @@
     position: absolute;
     top: 5px;
     right: 65px;
+    pointer-events: all;
+}
+
+.addButton:hover {
+    color: #bfbfbf;
 }

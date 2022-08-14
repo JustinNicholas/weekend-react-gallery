@@ -1,3 +1,5 @@
+// this file is no longer used after database is hooked up.
+
 const galleryItems = [
     { id: 1, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 1, showingImage: false },
     { id: 2, path: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Gold_star_on_blue.gif', description: 'Star I found online.', likes: 2, showingImage: true },

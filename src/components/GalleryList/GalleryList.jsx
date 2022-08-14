@@ -2,7 +2,7 @@ import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 import './GalleryList.css'
 
 function GalleryList({pictures, updateLikes, toggleImage, deletePicture}) {
-
+    // this loops through our pictures array and calls the gallery item component each time we loop throguh.
     return(
         <>
         {pictures.map(picture => (

@@ -1,7 +1,7 @@
 import './Header.css'
 
 function Header() {
-
+// we set the images in the css folder as background images and add some description of the site and the languages used.
     return(
         <div>
             <header className="App-header">

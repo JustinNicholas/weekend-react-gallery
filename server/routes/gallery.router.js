@@ -5,9 +5,9 @@ const pool = require('../modules/pool.js')
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
-// PUT Route
+// PUT Route for updating likes
 router.put('/like/:id', (req, res) => {
-    console.log(req.params);
+    // console.log(req.params);
     const galleryId = req.params.id;
     const pictureLikes = req.body.likes;
 
@@ -28,9 +28,9 @@ router.put('/like/:id', (req, res) => {
     
 }); // END PUT Route
 
-// status PUT Route
+// PUT Route for updating boolean of showingimage
 router.put('/:id', (req, res) => {
-    console.log(req.params);
+    // console.log(req.params);
     const galleryId = req.params.id;
     const updateStatus = req.body.showingimage;
 
@@ -50,14 +50,14 @@ router.put('/:id', (req, res) => {
         })
 }); // END PUT Route
 
-// GET Route
+// GET Route to get all db info
 router.get('/', (req, res) => {
     // res.send(galleryItems);
     let queryText = 'SELECT * FROM pictures ORDER BY id';
 
     pool.query(queryText)
         .then( result => {
-            console.log(result.rows);
+            // console.log(result.rows);
             res.send(result.rows);
         }).catch( err => {
             console.log(err);
@@ -65,6 +65,7 @@ router.get('/', (req, res) => {
         })
 }); // END GET Route
 
+// POST route for adding new images to db
 router.post('/', (req, res) => {
     let queryText = 'INSERT INTO pictures ("path", "description", "likes", "showingimage") VALUES ($1, $2, $3, $4)';
     let queryValues = [req.body.path, req.body.description, 0, true]
@@ -80,13 +81,14 @@ router.post('/', (req, res) => {
     })
 })
 
+// DELETE route for removing an entry from the db
 router.delete('/:id', (req, res) => {
     let queryText = 'DELETE FROM pictures WHERE id=$1'
     let queryValues = [req.params.id]
 
     pool.query(queryText, queryValues)
         .then( result => {
-            console.log(queryText, queryValues);
+            // console.log(queryText, queryValues);
             res.sendStatus(204);
         }).catch( err => {
             console.log(err);
