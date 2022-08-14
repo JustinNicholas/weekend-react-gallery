@@ -9,10 +9,14 @@ function AddItem({addPicture, getPictures}) {
 
     //this calls the clear function that sets the inputs back to blank and the add picture function that takes in the url and description that was entered
     const handleSubmit = (event) => {
-        const newUrl = url;
-        const newDes = des;
-        clearInputs();
-        addPicture(newUrl, newDes);
+        if (url === '' || des === ''){
+            alert('Please enter a URL and Description for your new gallery item')
+        } else {
+            const newUrl = url;
+            const newDes = des;
+            clearInputs();
+            addPicture(newUrl, newDes);
+        }
     }
     // sets the inputs back to blank after submitting.
     const clearInputs = () => {
