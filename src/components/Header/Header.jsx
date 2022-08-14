@@ -13,8 +13,8 @@ function Header() {
                         <p>Visitors can add to the gallery by inserting an image address and discription in the fields at the top of the page. Within the gallery, visitors can click on an image to see the description and use a button to like or remove an image. The total likes for each image is displayed within each image card. </p>
                     </div>
                     <div className='languages'>
-                    <div className='languagesHeading'>
-                        <h3>Languages Used</h3>
+                    <div>
+                        <h3 className='languagesHeading'>Languages Used</h3>
                     <div className='language'>
                         <ul>
                             <li>React.js</li>

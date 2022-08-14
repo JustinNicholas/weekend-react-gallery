@@ -41,3 +41,22 @@
     position: relative;
     height: 80%;
 }
+
+@media(max-width: 645px) {
+    .title {
+      font-size: 11px;
+    }
+    .App-title {
+        font-size: 20px;
+    }
+    .language {
+        font-size: 11px;
+    }
+    .languagesHeading {
+        font-size: 18px;
+    }
+    .languages {
+        right:10%;
+        top: 2%;
+    }
+  }
