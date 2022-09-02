@@ -1,7 +1,10 @@
-Project Name:
-Weekend React Gallery
+## Project Name:
+# Weekend React Gallery
 
-Description:
+# Heroku Link:
+https://hidden-temple-08817.herokuapp.com/
+
+# Description:
 Duration: Weekend (Aug 12th - 14th)
 
 For this project I created a gallery page to share pictures.
@@ -10,9 +13,9 @@ Visitors can add to the gallery by inserting an image address and discription in
 
 The biggest problem I faced was making the website responsive. I was able to use the Bootstrap grid system to make the image cards responsive and I added a breakpoint for the header. At 645px screen size and below the font size of the header goes down to make sure none of the text is cut off. I also used absolut positioning for the buttons and certain divs to make sure the look of the website was maintained at all sizes. 
 
-Screen Shot: [Screenshot of completed site](public/images/ReactGallery.png)
+# Screen Shot: [Screenshot of completed site](public/images/ReactGallery.png)
 
-Prerequisites and Installation:
+# Prerequisites and Installation:
 
 Node.js
 
@@ -28,13 +31,13 @@ npm run client will automaticallt open http://localhost:3000/ in your browser
 
 Create a database named react_gallery, The queries in the database.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries, Open up your editor of choice and run an npm install
 
-Usage of website:
+# Usage of website:
 
 -A user is able to type up to 300 characters in the URL input and 175 characters in the Description input. Clicking the plus button will submit a new entry to be added to the gallery.
 -Users can like an image or delete an image on the image card.
 -Users can click on an image and it will toggle the image with the description.
 
-Built With:
+# Built With:
 
 React.js
 Node.js
